@@ -1,0 +1,13 @@
+module top_module( 
+    input [99:0] in,
+    output [99:0] out
+);
+    integer n;
+    always @(*)
+        begin
+            for (n=0;n<100;n=n+1)
+                begin
+                    out[99-n]=in[n];
+                end 
+        end
+endmodule
